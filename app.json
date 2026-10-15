@@ -1,0 +1,30 @@
+{
+  "expo": {
+    "name": "QuantFlow: SSC CGL Quant Mastery",
+    "slug": "quantflow-ssc-cgl-mastery",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.quantflow.ssccgl"
+    },
+    "updates": {
+      "enabled": true,
+      "checkAutomatically": "ON_LOAD",
+      "fallbackToCacheTimeout": 0
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "plugins": [
+      "expo-status-bar",
+      "expo-updates"
+    ]
+  }
+}
