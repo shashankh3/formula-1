@@ -96,7 +96,7 @@ export default function FormulaFlipSessionScreen({ route, navigation }: any) {
     addXP(5);
     // Smooth error correction loop: push card to back of session queue
     setSessionCards((prev) => [...prev, currentCard]);
-    advanceCard();
+    advanceCard(1);
   };
 
   const handleMastered = () => {
@@ -115,10 +115,10 @@ export default function FormulaFlipSessionScreen({ route, navigation }: any) {
     advanceCard();
   };
 
-  const advanceCard = () => {
+  const advanceCard = (queuedAtEnd = 0) => {
     setFlipped(false);
     rot.value = 0;
-    if (cardIdx + 1 < sessionCards.length) {
+    if (cardIdx + 1 < sessionCards.length + queuedAtEnd) {
       setCardIdx((i) => i + 1);
     } else {
       setCompleted(true);

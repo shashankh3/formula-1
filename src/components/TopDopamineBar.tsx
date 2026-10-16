@@ -90,7 +90,7 @@ export default function TopDopamineBar() {
           {/* Duolingo Gem Pill */}
           <Animated.View style={[styles.statPill, xpAnim]}>
             <Gem size={19} color={Colors.blueFace} fill={Colors.blueFace} />
-            <Text style={[styles.statValue, { color: Colors.blueFace }]}>{gems || 480}</Text>
+            <Text style={[styles.statValue, { color: Colors.blueFace }]}>{gems}</Text>
           </Animated.View>
 
           {/* Duolingo Heart / Life Pill */}

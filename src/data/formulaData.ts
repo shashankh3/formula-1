@@ -776,7 +776,7 @@ export const FORMULA_CHAPTERS: FormulaChapter[] = [
         formula: 'Check: (Sum of Odd digits) - (Sum of Even digits) = 0 or 11',
         coachTip: 'Every formula with π (cylinder, cone, sphere, hemisphere) multiplies by 22/7 = 2 × 11 / 7. Answer MUST be divisible by 11! Filter options by 11 divisibility in 3 seconds.',
         memoryHook: 'If π is in formula, 11 is in the answer! Check alternating digit difference = 0 or 11.',
-        pyqExample: 'Volume of cylinder options: A) 1320, B) 1240, C) 1430, D) 1520. For 1320: (1+2) - (3+0) = 0 ✓. Only 1320 passes!',
+        pyqExample: 'Volume of cylinder options: A) 1320, B) 1240, C) 1450, D) 1520. For 1320: (1+2) - (3+0) = 0 ✓. Only 1320 passes!',
         twinTrapAlert: 'If TWO options are divisible by 11, check divisibility by 7 (from radius r), or check unit digits.',
         distractors: ['Check divisibility by 9 only', 'Always calculate using 3.14'],
         visualType: 'none',

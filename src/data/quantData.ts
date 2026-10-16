@@ -323,7 +323,7 @@ export const STRIKE_QUESTIONS: StrikeQuestion[] = [
     text: 'The difference between 3-year CI and SI vs 2-year CI and SI is in the ratio 31 : 10. Find Rate % p.a.',
     ghostTimeSeconds: 12,
     visualAid: 'tree',
-    goldenRule: 'Ratio is always (3n+1) / n² = (3×10 + 1) / 10² = 31/100... wait: 3-yr diff / 2-yr diff = (3B+C)/B = 3 + C/B. Here 31/10 = 3 + 1/10 ➔ R = 1/10 = 10%!',
+    goldenRule: '3-yr diff / 2-yr diff = (3n + 1) / n = 3 + 1/n. Here 31/10 = 3 + 1/10 ➔ R = 1/10 = 10%!',
     steps: [
       {
         prompt: 'STEP 1 — Tree Ratio: 3-yr diff / 2-yr diff = (3B + C) / B = 3 + C/B. Equate to 31/10.',
@@ -1514,7 +1514,7 @@ export const FRACTION_DECK: FractionCard[] = [
   { base: '1/10', percent: '10%', decimal: '0.1', multiples: '3/10=30%, 7/10=70%', value: 10 },
   { base: '1/11', percent: '9¹/₁₁%', decimal: '0.0909', multiples: '2/11=18²/₁₁%, 3/11=27³/₁₁%', value: 9.091 },
   { base: '1/12', percent: '8⅓%', decimal: '0.0833', multiples: '5/12=41⅔%, 7/12=58⅓%', value: 8.333 },
-  { base: '1/13', percent: '7⁹/₁₃%', decimal: '0.0769', multiples: '2/13 = 15³/₁₃%', value: 7.692 },
+  { base: '1/13', percent: '7⁹/₁₃%', decimal: '0.0769', multiples: '2/13 = 15⁵/₁₃%', value: 7.692 },
   { base: '1/14', percent: '7¹/₇%', decimal: '0.0714', multiples: '3/14=21³/₇%', value: 7.143 },
   { base: '1/15', percent: '6⅔%', decimal: '0.0667', multiples: '2/15=13⅓%, 4/15=26⅔%', value: 6.667 },
   { base: '1/16', percent: '6.25%', decimal: '0.0625', multiples: '3/16=18.75%, 7/16=43.75%', value: 6.25 },

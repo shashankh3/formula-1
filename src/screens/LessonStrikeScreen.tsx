@@ -78,7 +78,7 @@ export default function LessonStrikeScreen({ route, navigation }: any) {
     return STRIKE_QUESTIONS[0];
   }, [questionId, chapterId]);
   const targetChapterId = chapterId || STRIKE_TO_PATH_MAP[question.chapterId] || question.chapterId;
-  const { flowMultiplier, ghostRecords, registerCorrectStep, registerWrong, reviewTopic, awardCrown, addXP, setUnitActivityCompleted } = useGame();
+  const { flowMultiplier, ghostRecords, registerCorrectStep, registerWrong, reviewTopic, awardCrown, addXP, setUnitActivityCompleted, setGhostIfBetter } = useGame();
 
   const [stepIdx, setStepIdx] = useState(0);
   const [selectedOpt, setSelectedOpt] = useState<number | null>(null);
@@ -145,7 +145,10 @@ export default function LessonStrikeScreen({ route, navigation }: any) {
         setSelectedOpt(null);
       } else {
         const crushed = secs <= ghost;
+        const finalXP = crushed ? 25 : Math.round(10 * flowMultiplier) + 15;
         const isCritical = Math.random() < 0.25;
+        addXP(finalXP);
+        setGhostIfBetter(question.id, secs);
         reviewTopic(targetChapterId, crushed ? 4 : 3);
         awardCrown(targetChapterId);
         setUnitActivityCompleted(targetChapterId, 'drill');
@@ -154,8 +157,8 @@ export default function LessonStrikeScreen({ route, navigation }: any) {
           kind: isCritical ? 'critical' : 'correct',
           title: isCritical ? 'CRITICAL SOLVE!' : crushed ? 'SPEED RECORD BROKEN!' : 'EXCELLENT!',
           xpText: crushed
-            ? `+25 XP • Beat Ghost by ${Math.max(0, ghost - secs)}s!`
-            : `+${Math.round(10 * flowMultiplier) + 15} XP • Completed in ${secs}s`,
+            ? `+${finalXP} XP • Beat Ghost by ${Math.max(0, ghost - secs)}s!`
+            : `+${finalXP} XP • Completed in ${secs}s`,
         });
       }
     } else {

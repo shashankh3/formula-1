@@ -62,7 +62,7 @@ export function updateStability(
 
   if (grade === 1) {
     // lapse: stability collapses, harder material collapses more
-    const factor = 0.35 + 0.04 * D; // 0.39..0.75
+    const factor = 0.75 - 0.04 * D; // 0.35..0.71
     return clamp(S * factor, 0.1, 365);
   }
 

@@ -33,7 +33,7 @@ export default function FormulaMatchScreen() {
 
   const [pool, setPool] = useState<FormulaCard[]>(() => shuffle(ALL_FORMULAS).slice(0, 5));
   const [rightItems, setRightItems] = useState<string[]>(() =>
-    shuffle(ALL_FORMULAS.slice(0, 5).map((f) => f.trigger))
+    shuffle(pool.map((f) => f.trigger))
   );
 
   const [selLeft, setSelLeft] = useState<string | null>(null);

@@ -25,6 +25,11 @@
     "plugins": [
       "expo-status-bar",
       "expo-updates"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "ce4009df-5a3c-4f11-9de6-71ab89135617"
+      }
+    }
   }
 }
