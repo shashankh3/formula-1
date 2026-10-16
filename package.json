@@ -10,8 +10,8 @@
     "web": "expo start --web",
     "ts:check": "tsc --noEmit",
     "update": "npx --yes eas-cli update --auto",
-    "update:preview": "npx --yes eas-cli update --branch preview --message \"Live Tier-1 Update\"",
-    "update:prod": "npx --yes eas-cli update --branch production --message \"Live Tier-1 Production Update\"",
+    "update:preview": "npx --yes eas-cli update --branch preview --message \"Live Tier-1 Update\" --environment preview",
+    "update:prod": "npx --yes eas-cli update --branch production --message \"Live Tier-1 Production Update\" --environment production",
     "build:apk": "npx --yes eas-cli build -p android --profile preview",
     "export": "expo export"
   },
